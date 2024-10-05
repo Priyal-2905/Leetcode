@@ -4,14 +4,14 @@
  */
 var once = function(fn) {
     
-    let isCalled = false;
+  let called = false;
 
-    return function(...args){
-       if(!isCalled){
-        isCalled = true;
+  return (...args)=>{
+    if(called === false){
+        called = true;
         return fn(...args);
-       }
     }
+  }
     
 };
 
