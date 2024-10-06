@@ -5,10 +5,11 @@ Array.prototype.last = function() {
        
       var len = this.length -1;
       
-      if(len == -1){
-        return len;
+      if(this.length === 0){
+        return -1;
+      }else{
+          return this[len];
       }
-      return this[len];
 
     
 };
