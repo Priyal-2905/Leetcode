@@ -1,23 +1,21 @@
 class Solution {
 public:
-     void makeSubset( vector<int> nums , vector<vector<int>>& res , int index ,vector<int> curr){
 
+    void make(vector<int>&temp ,vector<vector<int>>& res,int index,vector<int>& nums){
         if(index == nums.size()){
-            res.push_back(curr);
+            res.push_back(temp);
             return;
         }
-        curr.push_back(nums[index]);
-        makeSubset(nums , res , index + 1, curr);
-        curr.pop_back();
-        makeSubset(nums , res , index + 1 , curr);
-    }
+        temp.push_back(nums[index]);
+        make(temp,res,index+1,nums);
+        temp.pop_back();
+        make(temp,res,index+1,nums);
 
+    }
     vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> temp;
         vector<vector<int>> res;
-        vector<int> curr;
-        makeSubset(nums , res , 0 , curr);
+        make(temp,res,0,nums);
         return res;
     }
-
-  
 };
