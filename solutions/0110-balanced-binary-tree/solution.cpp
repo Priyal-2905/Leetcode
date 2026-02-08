@@ -21,6 +21,7 @@ public:
         if(left == -1 || right == -1){
             return -1;
         }
+        
         if(abs(left-right) > 1){
             return -1;
         }
