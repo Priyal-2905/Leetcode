@@ -15,7 +15,7 @@ public:
         
         for(ListNode *i = head;i != NULL;i = i->next){ len++;}
 
-        if(len ==0||len == 1||k==0){
+        if(len == 0||len == 1||k==0){
             return head;
         }
 
@@ -31,7 +31,7 @@ public:
         if(curr == NULL){
             return head;
         }
-        
+
         prev->next = NULL;
         ListNode *h1 = curr;
         while(curr->next != NULL){
