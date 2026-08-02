@@ -1,11 +1,11 @@
 class Solution {
 public: 
     bool solve(int i,int j,vector<int>& piles,vector<vector<int>>& dp){
-        if(j == i){
+        if(i == j){
             return piles[i];
         }
 
-        if(dp[i][j] != INT_MIN){
+        if(dp[i][j] != -1){
             return dp[i][j];
         }
 
